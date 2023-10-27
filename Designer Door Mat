@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+dimensions = list(map(int, input().split()))
+
+string = ".|."
+add = ".|..|."
+for i in range(dimensions[0]):
+    if i == (dimensions[0] // 2):
+        print("WELCOME".center(dimensions[1], '-'))
+        string = string[:-6]
+    else:
+        print(string.center(dimensions[1], '-'))
+        if i < (dimensions[0] // 2):
+            string = string + add
+        else:
+            string = string[:-6]
+  
